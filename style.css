@@ -1,0 +1,40 @@
+body {
+    background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+#title{
+    text-align: center;
+}
+table th {
+    border: 1px solid red;
+}
+table td {
+    border: 1px solid red;
+}
+.courseName{
+    width: 300px;
+}
+.grade{
+    width: 100px;
+}
+.credits{
+    width: 100px;
+}
+.weight{
+    width: 200px;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#table-container{
+    border: 1px solid red;
+    display: inline-block;
+}
+#resultGPA{
+    display: inline-block;
+    border: 1px solid red;
+    height: 100px;
+    width: 300px;
+}
