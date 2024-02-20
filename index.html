@@ -4,44 +4,59 @@
         <title>GPA Calculator</title>
         <link rel="stylesheet" type="text/css" href="./style.css">
         <script src="./script.js" async></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 id="title">GPA Calculator</h1>
+        <div id="title-banner">
+            <h1 id="title">GPA Calculator</h1>
+        </div>
         <div id="table-container">
+            <!-- form for inputting data for gpa -->
             <form id="GPAInput">
+                <!-- table for organizing and formattign input areas -->
                 <table id="inputTable">
-                    <tr id="row0">
-                        <th class="courseName">Course Name (opt.)</th>
-                        <th class="grade">Grade</th>
-                        <th class="credits">Credits</th>
-                        <th class="weight">Course Weight</th>
-                    </tr>
+                    <!-- headings for columns -->
+                    <thead>
+                        <tr id="row0">
+                            <th class="courseName">Course Name (opt.)</th>
+                            <th class="grade">Grade</th>
+                            <th class="credits">Credits</th>
+                            <th class="weight">Course Weight</th>
+                        </tr>
+                    </thead>
+                    <!-- rows for inputting data -->
                     <tr id="row1" class="data">
-                        <td>
-                            <input type="text" name="course1" id="course1" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course1" id="course1" class="input courseInput">
                         </td>
-                        <td>
-                            <select name="letterGrade1" id="letterGrade1" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade1" id="letterGrade1" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits1" id="credits1" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits1" id="credits1" min="1" class="input creditsInput" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight1" id="weight1" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight1" id="weight1" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -50,31 +65,35 @@
                         </td>
                     </tr>
                     <tr id="row2" class="data">
-                        <td>
-                            <input type="text" name="course2" id="course2" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course2" id="course2" class="input courseInput">
                         </td>
-                        <td>
-                            <select name="letterGrade2" id="letterGrade2" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade2" id="letterGrade2" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits2" id="credits2" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits2" id="credits2" min="1" class="input creditsInput" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight2" id="weight2" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight2" id="weight2" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -83,31 +102,35 @@
                         </td>
                     </tr>
                     <tr id="row3" class="data">
-                        <td>
-                            <input type="text" name="course3" id="course3" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course3" id="course3" class="input coursesInput">
                         </td>
-                        <td>
-                            <select name="letterGrade3" id="letterGrade3" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade3" id="letterGrade3" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits3" id="credits3" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits3" id="credits3" class="input creditsInput" min="1" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight3" id="weight3" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight3" id="weight3" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -116,31 +139,35 @@
                         </td>
                     </tr>
                     <tr id="row4" class="data">
-                        <td>
-                            <input type="text" name="course4" id="course4" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course4" id="course4" class="input coursesInput">
                         </td>
-                        <td>
-                            <select name="letterGrade4" id="letterGrade4" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade4" id="letterGrade4" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits4" id="credits4" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits4" id="credits4" min="1" class="input creditsInput" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight4" id="weight4" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight4" id="weight4" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -149,31 +176,35 @@
                         </td>
                     </tr>
                     <tr id="row5" class="data">
-                        <td>
-                            <input type="text" name="course5" id="course5" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course5" id="course5" class="input coursesInput">
                         </td>
-                        <td>
-                            <select name="letterGrade5" id="letterGrade5" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade5" id="letterGrade5" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits5" id="credits5" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits5" id="credits5" min="1" class="input creditsInput" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight5" id="weight5" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight5" id="weight5" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -182,31 +213,35 @@
                         </td>
                     </tr>
                     <tr id="row6" class="data">
-                        <td>
-                            <input type="text" name="course6" id="course6" class="courseName">
+                        <!-- course name input -->
+                        <td class="courseName">
+                            <input type="text" name="course6" id="course6" class="input coursesInput">
                         </td>
-                        <td>
-                            <select name="letterGrade6" id="letterGrade6" class="grade" onchange="calculateGPA()">
+                        <!-- grade input -->
+                        <td class="grade">
+                            <select name="letterGrade6" id="letterGrade6" class="input gradeInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
-                                <option value="A+">A+</option>
+                                <option value="A">A+</option>
                                 <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
+                                <option value="A">A-</option>
+                                <option value="B">B+</option>
                                 <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
+                                <option value="B">B-</option>
+                                <option value="C">C+</option>
                                 <option value="C">C</option>
-                                <option value="C-">C-</option>
-                                <option value="D+">D+</option>
+                                <option value="C">C-</option>
+                                <option value="D">D+</option>
                                 <option value="D">D</option>
                                 <option value="F">F</option>
                             </select>
                         </td>
-                        <td>
-                            <input type="number" name="credits6" id="credits6" class="credits" min="1" onchange="calculateGPA()">
+                        <!-- credits input -->
+                        <td class="credits">
+                            <input type="number" name="credits6" id="credits6" class="input creditsInput" min="1" onchange="calculateGPA()">
                         </td>
-                        <td>
-                            <select name="weight6" id="weight6" class="weight" onchange="calculateGPA()">
+                        <!-- weight input -->
+                        <td class="weight">
+                            <select name="weight6" id="weight6" class="input weightInput" onchange="calculateGPA()">
                                 <option value="" selected disabled hidden></option>
                                 <option value="4.0">Regular</option>
                                 <option value="5.0">Honors</option>
@@ -217,6 +252,7 @@
                 </table>
             </form>
         </div>
+        <!-- Table for displaying GPA -->
         <div id="resultGPA">
             <table id="tableGPA">
                 <tr>
@@ -229,6 +265,12 @@
                 </tr>
             </table>
         </div>
-        <button id="resetButton" onclick="reset()">Reset</button>
+        <!-- button for resetting form -->
+        <div id="otherButtons">
+            <button id="resetButton" class="button" onclick="reset()">Reset</button>
+            <a href="./help.html">
+                <button id="helpButton" class="button"> Help </button>
+            </a>
+        </div>
     </body>
 </html>

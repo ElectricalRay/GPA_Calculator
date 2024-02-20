@@ -1,0 +1,59 @@
+html{
+    width: 100%;
+    height: 100%;
+  }
+  body {
+      background-color: #e8e8e8;
+      font-family: Lato;
+      font-size: 20px;
+      margin: 0;
+  }
+  #title{
+      text-align: center;
+  }
+  #title-banner{
+    border: 1px solid rgb(208, 32, 46);
+    background-color: rgb(208, 32, 46);
+  }
+  #stepTitle{
+    text-align: center;
+  }
+  #references{
+    width: 100%;
+  }
+  #letterGradeRef{
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+  }
+  #weightRef{
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+  }
+  table{
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: auto;
+    empty-cells: show;
+    width: 90%;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+  }
+  table td{
+    color: white;
+  }
+  table th{
+    color: white;
+  }
+  #returnBut{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px 15px 10px;
+    margin: 10px 10%;
+  }
+  #nav{
+    text-align: center;
+  }
