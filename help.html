@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Help</title>
-    <link rel="stylesheet" type="text/css" href="./help.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="./help.js"></script>
+  <title>Help</title>
+  <link rel="stylesheet" type="text/css" href="./help.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="./help.js"></script>
 </head>
+
 <body>
-    
+  <!-- div for title and title banner -->
   <div id="title-banner">
     <h1 id="title">Help</h1>
   </div>
+  <!-- div for steps on using GPA calculator -->
   <div id="steps">
     <h2 id="stepTitle">Steps</h2>
     <ol>
-      <li>Enter your course names for however many classes you want to include.</li>
-      <li>Select what grade you got for each class. If you don't know what letter grade you have, you can use the calculator down below to find out using the percentage. </li>
-      <li>Type in how many credits each class is worth. </li>
-      <li>Select the course weight for each class. The reference down below will tell you how much each type is weighted.</li>
+      <li>
+        Enter your course names for however many classes you want to include.
+      </li>
+      <li>
+        Select what grade you got for each class. If you don't know what
+        letter grade you have, you can use the calculator down below to find
+        out using the percentage.
+      </li>
+      <li>Type in how many credits each class is worth.</li>
+      <li>
+        Select the course weight for each class. The reference down below will
+        tell you how much each type is weighted.
+      </li>
       <li>Once you're done, click the reset button to clear the form.</li>
     </ol>
   </div>
+  <!-- div for percent-to-grade calculator and weightage table -->
   <div id="References">
-    <div id=letterGradeRef>
+    <!-- div for percent-to-grade calculator -->
+    <div id="letterGradeRef">
       <h3>Percent-To-Grade Calculator</h3>
       <form>
         <table>
+          <!-- headings for columns -->
           <thead>
             <tr>
               <th>Percentage</th>
               <th>Letter Grade</th>
             </tr>
           </thead>
-            <tr>
-              <td>
-                <input type="number" min="0" max="100" id="percent" name="percent" oninput="grade()">
-              </td>
-              <td id="letterGrade"></td>
-            </tr>
+          <tr>
+            <!-- input for percentage -->
+            <td>
+              <input type="number" min="0" max="100" id="percent" name="percent" oninput="grade()" />
+            </td>
+            <!-- cell where letter grade displayed -->
+            <td id="letterGrade"></td>
+          </tr>
         </table>
       </form>
     </div>
+    <!-- div for weight reference table -->
     <div id="weightRef">
       <h3>Weightage Table</h3>
       <table>
+        <!-- headings for columns -->
         <thead>
           <tr>
             <th>Type</th>
             <th>Weight</th>
           </tr>
         </thead>
+        <!-- regular class weight -->
         <tr>
           <td>Regular</td>
           <td>4.0</td>
         </tr>
+        <!-- honors class weight -->
         <tr>
           <td>Honors</td>
           <td>5.0</td>
         </tr>
+        <!-- AP/IB class weight -->
         <tr>
           <td>AP/IB</td>
           <td>5.0</td>
@@ -67,8 +91,10 @@
       </table>
     </div>
   </div>
-  <div id="nav">
+  <!-- div for return button -->
+  <div id="return">
     <a href="./index.html"><button id="returnBut">Go Back</button></a>
   </div>
 </body>
+
 </html>
